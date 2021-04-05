@@ -1,8 +1,8 @@
-package main.java.tasks;
+package main.java.jd01_02;
 
 import java.util.Scanner;
 
-public class Main {
+public class TaskA {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int[] mas =new int[10];
@@ -14,7 +14,7 @@ public class Main {
         step2(mas);
         step3(mas);
     }
-    private static void step1(int[] mas){
+    static void step1(int[] mas){
         int min= mas[0];
         int max= mas[0];
         for (int element : mas) {
@@ -23,8 +23,7 @@ public class Main {
         }
         System.out.println(min+ " " +max);
     }
-
-    private static void step2 (int[ ] mas){
+    static void step2 (int[ ] mas){
         double avg= 0;
         for (int element : mas){
             avg=avg+element;
@@ -32,12 +31,12 @@ public class Main {
         avg=avg/mas.length;
         for (int element:mas) {
             if (element<avg)
-                System.out.println(element+ " ");
+                System.out.print(element+ " ");
         }
-
+        System.out.println();
     }
 
-    private static void step3 (int[ ] mas){
+    static void step3 (int[ ] mas){
         int min=mas[0];
         for (int element : mas) {
             if (min > element) min = element;
